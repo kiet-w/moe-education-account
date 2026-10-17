@@ -510,3 +510,19 @@ Appendix C. Danh sách màn hình:
 | SCR-07 | Xác nhận thanh toán | Trạng thái thành công, mã tham chiếu, thời gian, từng phần thanh toán (EA, online), tổng tiền, biên lai in hay tải PDF | Tải hay in biên lai, về SCR-02 | Success |
 | SCR-08 | Thanh toán thất bại | Lỗi, lý do, mã tham chiếu, thông báo phần EA đã được hoàn (nếu có) | Thử lại (về SCR-04), thoát (về SCR-02) | Failed, Cancelled |
 
+
+## 7. Ghi chú Thống nhất & Quyết định Nghiệp vụ (Reviewer & Team Decisions)
+
+Dưới đây là các ghi chú, phản biện nghiệp vụ trực tiếp từ bản Google Doc FSD (chú thích `[a]` đến `[g]`):
+
+| Mã | Loại | Vị trí liên quan | Nội dung thống nhất & Hướng dẫn triển khai |
+| :--- | :---: | :--- | :--- |
+| **`[a]`** | `[TD]` | SCR-02 (Danh sách phí) | **Hiển thị trạng thái Invoice:** Cần hiển thị rõ tình trạng của từng invoice trên giao diện (Unpaid, Paid, Overdue) để Parent dễ nhận biết. |
+| **`[b]`** | `[WA]` | 1.3 Scope & Limitations | **Thời hạn phiên giao dịch:** Cần xác định thời hạn của mỗi phiên giao dịch thanh toán để tránh treo hóa đơn. |
+| **`[c]`** | `[TD]` | 1.5 Exclusions & Split-Payment | **Quy tắc tính Bill khi Split-Payment:** Ví dụ 1 hóa đơn $100 không được tách thành 2 bill $50 + $50 rời rạc, mà chỉ được thanh toán đồng thời từ EA và Online trong 1 lần duy nhất $\rightarrow$ Hệ thống vẫn ghi nhận là thanh toán cho 1 invoice duy nhất. |
+| **`[d]`** | `[WA]` | EX-02 / Refund Rule | **Chính sách hoàn tiền (Refund):** Giả định hiện tại là hoàn lại trực tiếp vào tài khoản nguồn đã thanh toán nếu giao dịch đã trừ tiền nhưng thất bại ở khâu xác nhận cuối; nếu lỗi xảy ra trước khi trừ tiền thì chặn từ đầu $\rightarrow$ chưa phát sinh giao dịch nên chưa cần hoàn. |
+| **`[e]`** | `[TD]` | SCR-04 & Split-Payment Flow | **Quy tắc trừ số dư EA:** Không cho phép Parent tự nhập số tiền EA tùy ý. Hệ thống mặc định số tiền EA tự động bằng đúng giá trị hóa đơn (nếu EA đủ tiền) hoặc bằng toàn bộ số dư còn lại trong EA (nếu không đủ tiền, phần thiếu chuyển sang Online). |
+| **`[f]`** | `[WA - Deferred]` | EX-02 Timeout | **Thời gian timeout phiên Online:** Giả định là 10 phút (theo thông lệ các cổng thanh toán ngân hàng). Nội dung này chưa triển khai trong Sprint 1 MVP mà làm ở Sprint sau. |
+| **`[g]`** | `[REF]` | 4. Data Fields Table | **Rà soát ma trận dữ liệu:** Đội ngũ Dev/QA đối chiếu bảng Data Fields với bảng Master Data & Fee Calculation matrix của dự án. |
+
+
