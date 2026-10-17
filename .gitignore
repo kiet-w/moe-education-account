@@ -1,3 +1,12 @@
+# Ignore all binary documents (only keep Markdown .md in repository)
+*.docx
+*.xlsx
+*.pptx
+*.pdf
+~$*.docx
+~$*.xlsx
+~$*.pptx
+
 # OS generated files
 .DS_Store
 .DS_Store?
@@ -6,11 +15,6 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
-
-# Office temporary lock files
-~$*.docx
-~$*.xlsx
-~$*.pptx
 
 # Python cache
 __pycache__/

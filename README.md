@@ -2,6 +2,7 @@
 ## Agile Project Documentation, Modular Functional Specifications & Technical Audit
 
 [![Project Status: Active](https://img.shields.io/badge/Project%20Status-Active%20Sprint%201-brightgreen.svg)](#)
+[![Format: Pure Markdown](https://img.shields.io/badge/Format-100%25%20Markdown%20Diffable-success.svg)](#)
 [![Architecture: Distributed Web / SSO](https://img.shields.io/badge/Architecture-Admin%20%26%20e--Service%20Portals-blue.svg)](#)
 [![GovTech Compliance](https://img.shields.io/badge/Security-SingPass%20%2F%20MOE%20Active%20Directory-orange.svg)](#)
 
@@ -10,6 +11,8 @@
 ## 1. TỔNG QUAN HỆ THỐNG (EXECUTIVE OVERVIEW)
 
 Dự án **Education Account & Fee Management System** do **Bộ Giáo dục Singapore (MOE HQ)** đầu tư xây dựng nhằm hiện đại hóa và tự động hóa toàn diện quy trình quản lý tài chính giáo dục, danh mục trường lớp học sinh, biểu phí tập trung và phân bổ trợ cấp tài chính xã hội.
+
+Repository này được chuẩn hóa dưới định dạng **100% Markdown thuần túy (.md)**, cho phép toàn bộ đội ngũ kỹ sư, BA, QA và các bên liên quan có thể đọc trực tiếp trên GitHub, tìm kiếm toàn văn, kiểm tra `git diff` tức thì và quản lý phiên bản rõ ràng không phụ thuộc vào tệp nhị phân Microsoft Office.
 
 ### 🏛️ Hai phân hệ hợp nhất (Unified Dual-Portal Architecture):
 1. **Admin Portal (MOE HQ & School Users):**
@@ -53,20 +56,20 @@ Dự án **Education Account & Fee Management System** do **Bộ Giáo dục Sin
 
 ## 3. BẢN ĐỒ ĐẶC TẢ CHỨC NĂNG MODULE HÓA (FS-01 ĐẾN FS-10)
 
-Toàn bộ tài liệu đặc tả chức năng đồ sộ ban đầu (`[Agile] FS.docx`) đã được **tách rời hoàn chỉnh thành 10 module độc lập** trong thư mục [`document/FS document/`](document/FS%20document/). Lập trình viên và kiểm thử viên có thể mở trực tiếp định dạng Markdown (`.md`) hoặc Word (`.docx`):
+Toàn bộ đặc tả hệ thống đã được **module hóa hoàn toàn thành 10 tệp Markdown chuyên biệt** trong thư mục [`document/FS document/`](document/FS%20document/), giúp quản lý và cập nhật độc lập:
 
-| Module ID | Req | Tên Phân Hệ & Hồ Sơ Đặc Tả | Tài Liệu Markdown (.md) | Tài Liệu Word (.docx) |
-| :---: | :---: | :--- | :---: | :---: |
-| **FS-01** | **R1** | **Education Account Lifecycle Management** | [FS-01.md](document/FS%20document/FS-01_Education_Account_Lifecycle.md) | [FS-01.docx](document/FS%20document/FS-01_Education_Account_Lifecycle.docx) |
-| **FS-02** | **R2** | **Education Account Top-Up Management** | [FS-02.md](document/FS%20document/FS-02_Education_Account_TopUp.md) | — |
-| **FS-03** | **R3** | **School, Student & Fee Management** | [FS-03.md](document/FS%20document/FS-03_School_Student_Fee_Management.md) | [FS-03.docx](document/FS%20document/FS-03_School_Student_Fee_Management.docx) |
-| **FS-04** | **R4** | **Financial Assistance Scheme (FAS) & AI Scoring** | [FS-04.md](document/FS%20document/FS-04_Financial_Assistance_Scheme_FAS.md) | — |
-| **FS-05** | **R5** | **Hardcopy FAS Applications Processing (Offline)** | [FS-05.md](document/FS%20document/FS-05_Hardcopy_Applications_Offline.md) | — |
-| **FS-06** | **R6** | **FAS Budget & Statistics Tracking** | [FS-06.md](document/FS%20document/FS-06_FAS_Budget_and_Statistics.md) | — |
-| **FS-07** | **R7** | **User View Simulation / Impersonation** | [FS-07.md](document/FS%20document/FS-07_User_Simulation_ViewAs.md) | — |
-| **FS-08** | **R8** | **Parent Portal (SingPass, Education Account, Profile)** | [FS-08.md](document/FS%20document/FS-08_Parent_Portal_SingPass_Profile.md) | [FS-08.docx](document/FS%20document/FS-08_Parent_Portal_SingPass_Profile.docx) |
-| **FS-09** | **R9** | **Outstanding Fees and Payment Processing** | [FS-09.md](document/FS%20document/FS-09_Outstanding_Fees_and_Payment.md) | [FS-09.docx](document/FS%20document/FS-09_Outstanding_Fees_and_Payment.docx) |
-| **FS-10** | **R10** | **FAS Family Unit Application & AI Auto-Fill** | [FS-10.md](document/FS%20document/FS-10_FAS_Family_Application_Portal.md) | — |
+| Module ID | Req | Tên Phân Hệ & Hồ Sơ Đặc Tả | Tài Liệu Markdown (.md) | Phân Hệ (Portal) | Phân Bổ Sprint |
+| :---: | :---: | :--- | :---: | :---: | :---: |
+| **FS-01** | **R1** | **Education Account Lifecycle Management** | [FS-01.md](document/FS%20document/FS-01_Education_Account_Lifecycle.md) | Admin Portal | **Sprint 1** |
+| **FS-02** | **R2** | **Education Account Top-Up Management** | [FS-02.md](document/FS%20document/FS-02_Education_Account_TopUp.md) | Admin Portal | **Sprint 2** |
+| **FS-03** | **R3** | **School, Student & Fee Management** | [FS-03.md](document/FS%20document/FS-03_School_Student_Fee_Management.md) | Admin Portal | **Sprint 1 & 2** |
+| **FS-04** | **R4** | **Financial Assistance Scheme (FAS) & AI Scoring** | [FS-04.md](document/FS%20document/FS-04_Financial_Assistance_Scheme_FAS.md) | Admin Portal | **Sprint 3** |
+| **FS-05** | **R5** | **Hardcopy FAS Applications Processing (Offline)** | [FS-05.md](document/FS%20document/FS-05_Hardcopy_Applications_Offline.md) | Admin Portal | **Sprint 3** |
+| **FS-06** | **R6** | **FAS Budget & Statistics Tracking** | [FS-06.md](document/FS%20document/FS-06_FAS_Budget_and_Statistics.md) | Admin Portal | **Sprint 3** |
+| **FS-07** | **R7** | **User View Simulation / Impersonation** | [FS-07.md](document/FS%20document/FS-07_User_Simulation_ViewAs.md) | Admin Portal | **Post-MVP** |
+| **FS-08** | **R8** | **Parent Portal (SingPass, Education Account, Profile)** | [FS-08.md](document/FS%20document/FS-08_Parent_Portal_SingPass_Profile.md) | e-Service Portal | **Sprint 1** |
+| **FS-09** | **R9** | **Outstanding Fees and Payment Processing** | [FS-09.md](document/FS%20document/FS-09_Outstanding_Fees_and_Payment.md) | e-Service Portal | **Sprint 1** |
+| **FS-10** | **R10** | **FAS Family Unit Application & AI Auto-Fill** | [FS-10.md](document/FS%20document/FS-10_FAS_Family_Application_Portal.md) | e-Service Portal | **Sprint 3** |
 
 ---
 
@@ -146,51 +149,48 @@ flowchart TD
 
 ---
 
-## 6. CẤU TRÚC THƯ MỤC REPOSITORY (REPOSITORY STRUCTURE)
+## 6. CẤU TRÚC THƯ MỤC REPOSITORY (100% MARKDOWN)
 
 ```
 .
 ├── README.md                                       # Báo cáo tổng quan dự án (File này)
-├── .gitignore                                      # Bộ lọc tệp tin hệ thống và tệp tạm Office
-└── document/                                       # Toàn bộ tài liệu dự án đã chuẩn hóa
-    ├── README.md                                   # Bảng chỉ mục thư mục tài liệu & mã băm SHA-256
+├── .gitignore                                      # Bộ lọc tệp tin hệ thống và tệp nhị phân Office
+└── document/                                       # Toàn bộ tài liệu dự án định dạng Markdown
+    ├── README.md                                   # Bảng chỉ mục tài liệu dự án
     ├── FSD_R3_GAP_AUDIT_REPORT.md                  # Báo cáo kiểm toán khoảng cách đặc tả R3
     ├── REQUIREMENTS_AND_BACKLOG_SUMMARY.md         # Báo cáo phân tích Backlog & Questionnaire
     ├── FS_SPECIFICATIONS_SUMMARY.md                # Báo cáo phân tích kỹ thuật chuyên sâu FS-08 & FS-09
     ├── MEETINGS_AND_DECISIONS_SUMMARY.md           # Báo cáo biên bản họp & Decisions Log
-    ├── Product Backlog.xlsx                        # Danh mục Product Backlog (28 items)
-    ├── First meeting questions.docx                # Bộ câu hỏi sơ khởi phiên làm việc đầu tiên
-    ├── Nội dung Overview Sprint 1.docx             # Kế hoạch thực hiện Sprint 1
+    ├── First_meeting_questions.md                  # Bộ câu hỏi sơ khởi phiên làm việc đầu tiên
+    ├── Noi_dung_Overview_Sprint_1.md               # Kế hoạch thực hiện Sprint 1
     ├── Documentation/                              # Biên bản họp, Transcript, Glossary & Q&A
-    │   ├── Agile Glossary.docx
-    │   ├── Agile requirements.xlsx
-    │   ├── Kickoff Transcript refined.docx
-    │   ├── MoM - Kickoff meeting - 12_10.docx
-    │   ├── MoM - Sprint 1 - 16_10.docx
-    │   ├── Questionaire.xlsx
-    │   └── Sprint 1 Review Transcript.docx
+    │   ├── Agile_Glossary.md
+    │   ├── Kickoff_Transcript_refined.md
+    │   ├── MoM_Kickoff_meeting_12_10.md
+    │   ├── MoM_Sprint_1_16_10.md
+    │   └── Sprint_1_Review_Transcript.md
     ├── FS document/                                # Toàn bộ 10 hồ sơ đặc tả chức năng Module hóa
-    │   ├── FS-01_Education_Account_Lifecycle.docx / .md
+    │   ├── FS-01_Education_Account_Lifecycle.md
     │   ├── FS-02_Education_Account_TopUp.md
-    │   ├── FS-03_School_Student_Fee_Management.docx / .md
+    │   ├── FS-03_School_Student_Fee_Management.md
     │   ├── FS-04_Financial_Assistance_Scheme_FAS.md
     │   ├── FS-05_Hardcopy_Applications_Offline.md
     │   ├── FS-06_FAS_Budget_and_Statistics.md
     │   ├── FS-07_User_Simulation_ViewAs.md
-    │   ├── FS-08_Parent_Portal_SingPass_Profile.docx / .md
-    │   ├── FS-09_Outstanding_Fees_and_Payment.docx / .md
-    │   ├── FS-10_FAS_Family_Application_Portal.md
-    │   └── [Agile] FS.docx                         # Bản gốc tổng hợp lưu trữ tham chiếu
-    └── Requirement analysis/                       # Tài liệu phân tích yêu cầu & giải pháp ban đầu
-        ├── [Agile] High-level Solution.docx
-        ├── Function Requirements.docx
-        └── Functional Reqirement 3.docx
+    │   ├── FS-08_Parent_Portal_SingPass_Profile.md
+    │   ├── FS-09_Outstanding_Fees_and_Payment.md
+    │   └── FS-10_FAS_Family_Application_Portal.md
+    └── Requirement analysis/                       # Tài liệu phân tích yêu cầu & kiến trúc giải pháp
+        ├── High-level_Solution.md
+        ├── Function_Requirements.md
+        └── Functional_Requirement_3.md
 ```
 
 ---
 
 ## 7. QUY TRÌNH PHỐI HỢP & BẢO TRÌ (CONTRIBUTION GUIDELINES)
 
-1. **Phân rã theo Module:** Tuyệt đối không chỉnh sửa đè vào tệp `[Agile] FS.docx`. Khi cần cập nhật bất kỳ tính năng nào, chỉnh sửa trực tiếp vào tệp `document/FS document/FS-XX_<Name>.md` (hoặc `.docx`).
-2. **Theo dõi User Stories & AC:** Mọi thay đổi về điều kiện biên cần đối chiếu lại với Acceptance Criteria tại [`document/REQUIREMENTS_AND_BACKLOG_SUMMARY.md`](document/REQUIREMENTS_AND_BACKLOG_SUMMARY.md) và các quyết định khách hàng tại [`document/MEETINGS_AND_DECISIONS_SUMMARY.md`](document/MEETINGS_AND_DECISIONS_SUMMARY.md).
-3. **Tuân thủ chuẩn bảo mật:** Bảo đảm tuân thủ nguyên tắc không lưu trữ mật khẩu nội bộ (SSO qua Active Directory) và bảo vệ dữ liệu công dân (SingPass, On-demand sync timeout 10s).
+1. **Chuẩn hóa Markdown:** Mọi tài liệu kỹ thuật, đặc tả chức năng và biên bản họp đều được duy trì dưới định dạng Markdown để phục vụ tra cứu nhanh và theo dõi `git diff`.
+2. **Cập nhật phân tán theo Module:** Khi có cập nhật bất kỳ tính năng nào từ R1 đến R10, chỉnh sửa trực tiếp vào tệp `document/FS document/FS-XX_<Name>.md` tương ứng.
+3. **Theo dõi User Stories & AC:** Mọi thay đổi về điều kiện biên cần đối chiếu lại với Acceptance Criteria tại [`document/REQUIREMENTS_AND_BACKLOG_SUMMARY.md`](document/REQUIREMENTS_AND_BACKLOG_SUMMARY.md) và các quyết định khách hàng tại [`document/MEETINGS_AND_DECISIONS_SUMMARY.md`](document/MEETINGS_AND_DECISIONS_SUMMARY.md).
+4. **Tuân thủ chuẩn bảo mật:** Bảo đảm tuân thủ nguyên tắc không lưu trữ mật khẩu nội bộ (SSO qua Active Directory) và bảo vệ dữ liệu công dân (SingPass, On-demand sync timeout 10s).
